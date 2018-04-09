@@ -2,8 +2,7 @@
 import random
 
 class Minimax(object):
-    """ Minimax object that takes a current connect four tablero state
-    """
+   
     
     tablero = None
     ficha = ["x", "o"]
@@ -15,9 +14,7 @@ class Minimax(object):
         
             
     def mejorMov(self, profundidad, state, jugador_actual):
-        """ Returns the best move (as a column number) and the associated alpha
-            Calls buscarAlpha()
-        """
+       
         
         # para saber cuando esta moviendo X o O
         if jugador_actual == self.ficha[0]:
@@ -43,9 +40,6 @@ class Minimax(object):
             if alpha >= best_alpha:
                 best_alpha = alpha
                 mejor_mov = move
-
-                print(best_alpha)
-                print(mejor_mov)
         
         return mejor_mov, best_alpha
         

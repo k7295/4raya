@@ -6,8 +6,7 @@ import jugadorIA
 
 
 class Game(object):
-    """ Game object that holds state of Connect 4 tablero and game values
-    """
+
     
     tablero = None
     round = None
@@ -81,7 +80,6 @@ class Game(object):
         # 42 campos
         if self.round > 42:
             self.fin = True
-            # this would be a stalemate :(
             return
         
         # mueve la ficha segun la columna que da el jugador
@@ -95,7 +93,6 @@ class Game(object):
                 self.imprimirTablero()
                 return
 
-        # if we get here, then the column is full
         print("movimiento invalido (columna llena)")
         return
     
