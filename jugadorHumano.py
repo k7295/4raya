@@ -22,8 +22,12 @@ class JugadorHumano(jugadorMovAbstract.JugadorMov):
                 choice = int(input("Ingrese numero de la columna colocara la ficha: ")) - 1
             except ValueError:
                 choice = None
-            if 0 <= choice <= 6:
-                col = choice
+            
+            if choice == None:
+                print("Opcion invalida,debe ser un numero entre 1 y 7")
             else:
-                print("Opcion invalida")
+                if 0 <= choice <= 6:
+                    col = choice
+                else:
+                    print("Opcion invalida, debe ser un numero entre 1 y 7")
         return col
